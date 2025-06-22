@@ -1,0 +1,69 @@
+/* 1️⃣  Google Fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* 2️⃣  Basic body text */
+html { font-size: 62.5%; }               /* 1 rem ≈ 10 px for easy math */
+body{
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;                     /* = 16 px by default        */
+  line-height: 1.65;
+  color: #262626;
+  margin: 0;
+}
+
+/* 3️⃣  Headings */
+h1,h2,h3,h4,h5,h6{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: .8em;
+  color: #004aad;                        /* classy royal-blue accent  */
+  text-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+/* Responsive fluid sizes */
+h1{ font-size: clamp(3rem, 5vw + 1rem, 4.4rem); }
+h2{ font-size: clamp(2.4rem, 3.5vw + .5rem, 3.2rem); }
+h3{ font-size: clamp(2rem, 2.5vw + .5rem, 2.4rem); }
+
+/* 4️⃣  Paragraph tweaks */
+p{
+  margin: 0 0 1.6em 0;
+  letter-spacing: .03em;
+}
+
+/* 5️⃣  Highlight utility (use <span class="highlight">text</span>) */
+.highlight{
+  background: linear-gradient(120deg,#ffef99 0%,#ffd65a 100%);
+  padding: .1em .25em;
+  border-radius: .3em;
+}
+
+/* 6️⃣  Link & button harmony */
+a{
+  color: #e63946;
+  text-decoration: none;
+  transition: color .25s;
+}
+a:hover{ color:#9c1d2a; }
+
+button, .btn{
+  font: 600 1.6rem "Poppins", sans-serif;
+  padding: .8em 2.2em;
+  border: none;
+  border-radius: 3rem;
+  background: #ff6565;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+button:hover, .btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+
+/* 7️⃣  Smooth section spacing helper */
+.section{
+  padding: clamp(4rem, 6vw, 8rem) 2rem;
+}

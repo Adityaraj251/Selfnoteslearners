@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self notes learner</title>
+<meta name="description" content="Get Class 9 Notes, Questions, NCERT-based content for Science, Maths, SST, IT, English. Best for school exam preparation.">
+<meta name="keywords" content="class 9 notes, class 9 questions, science notes, maths questions, SST NCERT, Information technology class 9">
+<meta name="author" content="Aditya Raj">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+    }
+
+    #goBtn {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      background-color: #ffffff;
+      color: #2193b0;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #goBtn:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.1);
+    }
+
+    #slideBox {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border-radius: 15px;
+      max-width: 600px;
+      text-align: center;
+      display: none;
+      animation: slideDown 0.5s forwards;
+    }
+
+    @keyframes slideDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <center><h1>Class 9 Notes & Questions</h1></center>
+  <p>Yahaan aapko milega Class 9 ke har subject ka best notes aur hundreds of questions – science, maths, SST, English, Hindi – sab kuch!</p>
+
+  <a href="pdf.html"><button id="goBtn" onclick="showBox()">Let's Go</button></a>
+</body>
+</html>
