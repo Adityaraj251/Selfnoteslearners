@@ -2,119 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class 9 Notes & Questions</title>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap");
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f0f8ff;
+  <style>
+    * {
       margin: 0;
       padding: 0;
-      color: #222;
+      box-sizing: border-box;
     }
 
-    header {
+    body {
+      font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #2193b0, #6dd5ed);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: #fff;
     }
 
     h1 {
-      font-family: 'Poppins', sans-serif;
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-align: center;
     }
 
-    p {
-      font-size: 1.3rem;
-      margin: 5px auto;
+    p.description {
+      font-size: 1.2rem;
+      text-align: center;
       max-width: 700px;
+      margin-bottom: 40px;
     }
 
-    section {
-      padding: 30px 20px;
-      border-bottom: 1px solid #ddd;
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
     }
 
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #004aad;
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
       margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #f0f0f0;
+      margin-bottom: 15px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #2193b0;
-      color: white;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #2193b0;
       border: none;
       border-radius: 30px;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: 0.3s;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #17607d;
+      background-color: #f1f1f1;
+      transform: scale(1.05);
     }
 
     footer {
+      margin-top: 50px;
       text-align: center;
-      padding: 20px;
-      background-color: #e0f7fa;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      color: #e0f7fa;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Class 9 Notes & Questions</h1>
-    <p>Yahaan milega aapko Class 9 ke har subject ka best notes aur questions – Science, Maths, SST, English, Hindi, aur bhi bahut kuch!</p>
-  </header>
+  <h1>Class 9 Notes & Questions</h1>
+  <p class="description">Yahaan milega Class 9 ke har subject ke smart notes aur questions – Science, Maths, SST, English, IT, Hindi, Sanskrit – sab kuch ek jagah!</p>
 
-  <section>
-    <h2>📘 Science</h2>
-    <p>Yahan par aapko milega Science ke har chapter ka clear notes, diagrams ke saath aur chapter wise hundreds of questions for practice!</p>
-    <a href="science.html"><button class="btn">Explore Science</button></a>
-  </section>
+  <div class="card-container">
+    <div class="card">
+      <h2>📘 Science</h2>
+      <p>Notes, diagrams aur 100+ questions har chapter ke liye.</p>
+      <a href="science.html" class="btn">Explore Science</a>
+    </div>
 
-  <section>
-    <h2>🌍 Social Science (SST)</h2>
-    <p>Social Science mein History, Geography, Civics aur Economics – sab kuch covered hai! Notes aur expected exam questions yahi milenge.</p>
-    <a href="sst.html"><button class="btn">Explore SST</button></a>
-  </section>
+    <div class="card">
+      <h2>🌍 Social Science</h2>
+      <p>History, Geography, Civics & Economics complete coverage.</p>
+      <a href="sst.html" class="btn">Explore SST</a>
+    </div>
 
-  <section>
-    <h2>📖 English</h2>
-    <p>Literature, grammar aur writing skills ke liye complete notes aur model questions yahaan par available hai!</p>
-    <a href="english.html"><button class="btn">Explore English</button></a>
-  </section>
+    <div class="card">
+      <h2>📖 English</h2>
+      <p>Literature, grammar, writing section sab included hai.</p>
+      <a href="english.html" class="btn">Explore English</a>
+    </div>
 
-  <section>
-    <h2>🧮 Mathematics</h2>
-    <p>Yahan milega Class 9 Math ke formulas, solved examples, NCERT based questions, aur NTSE level practice sets!</p>
-     <a href="mathematics.html"><button class="btn">Explore Mathematics</button></a>
-  </section>
+    <div class="card">
+      <h2>🧮 Mathematics</h2>
+      <p>Formulas, solved examples, NCERT + NTSE practice.</p>
+      <a href="mathematics.html" class="btn">Explore Maths</a>
+    </div>
 
-<section>
-  <h2>💻 Computer</h2>
-  <p>Yahan par aapko milega Computer subject ke important notes jaise hardware, software, internet, coding basics aur bahut saare exam-based questions bhi!</p>
-  <a href="computer.html"><button class="btn">Explore Computer</button></a>
-</section>
+    <div class="card">
+      <h2>💻 Computer</h2>
+      <p>Notes on IT, hardware, software & internet basics.</p>
+      <a href="computer.html" class="btn">Explore Computer</a>
+    </div>
 
-  <section>
-    <h2>📝 Sanskrit</h2>
-    <p>Sanskrit ka complete grammar notes, writing section tips aur chapter-wise Q&A yahaan aapko regularly milta rahega.</p>
-    <a href="hindi.html"><button class="btn">Explore Sanskrit</button></a>
-  </section>
+    <div class="card">
+      <h2>📝 Sanskrit</h2>
+      <p>Sanskrit grammar, chapter wise notes & Q&A available.</p>
+      <a href="hindi.html" class="btn">Explore Sanskrit</a>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 | Created by Aditya Raj | All Class 9 Notes and Questions
+    &copy; 2025 | Created by Aditya Raj | All rights reserved
   </footer>
 
 </body>
