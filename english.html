@@ -3,61 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <title>Class 9 English Notes & Questions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #f3e5f5, #ce93d8);
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
+      color: #4a148c;
+      overflow-x: hidden;
     }
+
     h1 {
-      font-size: 36px;
+      font-size: 3rem;
       color: #6a1b9a;
       margin-bottom: 20px;
+      animation: slideInTop 1s ease-out;
     }
+
     h2 {
       color: #4a148c;
-      margin-top: 40px;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      font-size: 1.7rem;
+      animation: fadeIn 1s ease forwards;
     }
+
     .btn {
-      background-color: #6a1b9a;
+      background: linear-gradient(45deg, #8e24aa, #6a1b9a);
       color: white;
       padding: 12px 30px;
       border: none;
-      border-radius: 25px;
-      font-size: 18px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
       cursor: pointer;
       margin-top: 10px;
+      transition: all 0.3s ease;
+      animation: bounceIn 1.5s ease forwards;
     }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
     .chapters {
-      margin-top: 20px;
+      margin-top: 25px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .chapter {
-      background-color: white;
+      background-color: #ffffffdd;
       width: 90%;
-      max-width: 600px;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      max-width: 700px;
+      margin: 12px;
+      padding: 18px 22px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       text-align: left;
+      transition: all 0.4s ease;
+      animation: fadeInUp 1s ease forwards;
     }
+
+    .chapter:hover {
+      transform: translateY(-5px);
+      background-color: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
     .chapter h3 {
       color: #8e24aa;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
     }
+
     .chapter a {
       text-decoration: none;
       color: #6a1b9a;
       font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInTop {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .chapter {
+        padding: 15px;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 10px 24px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>📘 Class 9 English</h1>
-  <button class="btn" onclick="alert('Let\'s Go!')">Let's study</button>
+  <button class="btn" onclick="alert('Let\'s Go!')">🚀 Let's Study</button>
 
   <!-- Beehive -->
   <h2>📖 Beehive (Main Reader)</h2>
@@ -65,14 +145,14 @@
     <div class="chapter"><h3>1. The Fun They Had</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>2. The Sound of Music</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>3. The Little Girl</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>4. A Truly Beautiful Mind</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>5. The Snake and the Mirror</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>6. My Childhood</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>7. Packing</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>8. Reach for the Top</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>9. The Bond of Love</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>10. Kathmandu</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>11. If I Were You</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>4. A Truly Beautiful Mind</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>5. The Sanke and the Mirror</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>6. My Childhood</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>7. Packing</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>8. Reach for the Top</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>9. The Bond of Love</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>10. Kathmandu</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>11. If Were You</h3></h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
   </div>
 
   <!-- Beehive Poems -->
@@ -81,13 +161,13 @@
     <div class="chapter"><h3>1. The Road Not Taken</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>2. Wind</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>3. Rain on the Roof</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>4. The Lake Isle of Innisfree</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>5. A Legend of the Northland</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>4. The lake Isle of Innisfree</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>5. A lengend of the Northland</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>6. No Men Are Foreign</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>7. The Duck and the Kangaroo</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>8. On Killing a Tree</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>9. The Snake Trying</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>10. A Slumber Did My Spirit Seal</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>8. On killing a Tree</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>9. The snake Tying</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>10. A Slumber Did My Spirit seal</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
   </div>
 
   <!-- Moments -->
@@ -98,7 +178,7 @@
     <div class="chapter"><h3>3. Iswaran the Storyteller</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>4. In the Kingdom of Fools</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>5. The Happy Prince</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
-    <div class="chapter"><h3>6. Weathering the Storm in Ersama</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
+    <div class="chapter"><h3>6. Weathering the Strom in Ersama</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>7. The Last Leaf</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>8. A House is Not a Home</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
     <div class="chapter"><h3>9. The Accidental Tourist</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Questions</a></p></div>
@@ -111,6 +191,5 @@
     <div class="chapter"><h3>Grammar Topics</h3><p><a href="#">📄 Notes</a> | <a href="#">❓ Practice</a></p></div>
     <div class="chapter"><h3>Writing Skills</h3><p><a href="#">📄 Formats</a> | <a href="#">📝 Practice</a></p></div>
   </div>
-
 </body>
 </html>
