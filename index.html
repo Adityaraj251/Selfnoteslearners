@@ -28,42 +28,72 @@
       overflow: hidden;
     }
 
+    /* Bubbles background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      background: url('https://www.transparenttextures.com/patterns/bubbles.png');
+      opacity: 0.07;
+      animation: floatBubbles 30s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes floatBubbles {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 -1000px; }
+    }
+
     .overlay {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.3);
-      z-index: 0;
+      z-index: 1;
     }
 
     .container {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 25px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      max-width: 700px;
-      margin: 20px;
-      animation: fadeIn 1s ease-in-out;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      max-width: 720px;
+      margin: 30px;
+      animation: zoomFade 1.2s ease-in-out;
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       color: #ffffff;
+      animation: shine 4s linear infinite;
+      background: linear-gradient(90deg, #ffffff, #e0f7fa, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @keyframes shine {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
     }
 
     p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       color: #f1f1f1;
+      animation: fadeInUp 1.3s ease forwards;
     }
 
     #goBtn {
-      padding: 14px 30px;
+      padding: 14px 35px;
       font-size: 1.1rem;
       font-weight: 600;
       background-color: #ffffff;
@@ -71,29 +101,32 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease;
     }
 
     #goBtn:hover {
-      background-color: #f1f1f1;
-      transform: translateY(-2px) scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
+    @keyframes zoomFade {
+      from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
       }
-
       p {
         font-size: 1rem;
       }
-
       #goBtn {
         font-size: 1rem;
         padding: 12px 24px;
