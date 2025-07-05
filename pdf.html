@@ -22,14 +22,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
       overflow-x: hidden;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-      text-align: center;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1100px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
       background: linear-gradient(90deg, #ffffff, #e0f7fa, #ffffff);
       background-clip: text;
       -webkit-background-clip: text;
@@ -40,6 +47,22 @@
     @keyframes shine {
       0% { background-position: -200% 0; }
       100% { background-position: 200% 0; }
+    }
+
+    .download-btn {
+      background-color: #ffffff;
+      color: #2193b0;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
     }
 
     p.description {
@@ -132,9 +155,16 @@
     }
 
     @media (max-width: 600px) {
-      h1 {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .header h1 {
         font-size: 2rem;
       }
+
       p.description {
         font-size: 1rem;
       }
@@ -143,10 +173,15 @@
 </head>
 <body>
 
-  <h1>Class 9 Notes & Questions</h1>
+  <!-- ✅ Heading with Side Button -->
+  <center><div class="header">
+    <h1>Class 9 Notes & Questions</h1></center></div>
+    <a href="https://drive.google.com/file/d/1E4xG8Jo1nD0irPjAU0X8Cr_6p6O-uo3v/view?usp=drivesdk" class="download-btn" download>⬇️ Download APK</a><br>
+
   <p class="description">Yahaan milega Class 9 ke har subject ke smart notes aur questions – Science, Maths, SST, English, IT, Hindi, Sanskrit – sab kuch ek jagah!</p>
 
   <div class="card-container">
+    <!-- All subject cards remain same -->
     <div class="card">
       <h2>📘 Science</h2>
       <p>Notes, diagrams aur 100+ questions har chapter ke liye.</p>
@@ -182,13 +217,7 @@
       <p>Sanskrit grammar, chapter wise notes & Q&A available.</p>
       <a href="hindi.html" class="btn">Explore Sanskrit</a>
     </div>
-  </div><br />
-    <!-- ✅ APK Download Button – Small Box --><center>
-<div class="card" style="max-width: 300px; margin: 0 auto;">
-  <h2 style="font-size: 1.4rem;">📥 Download App</h2>
-  <p style="font-size: 0.9rem;">Download Class 9 Notes & Questions app (APK).</p>
-  <a href="https://drive.google.com/file/d/1E4xG8Jo1nD0irPjAU0X8Cr_6p6O-uo3v/view?usp=drivesdk" class="btn" download>Download APK</a>
-</div></center>
+  </div>
 
   <footer>
     &copy; 2025 | Created by Aditya Raj | All rights reserved
